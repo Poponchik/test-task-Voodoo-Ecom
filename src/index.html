@@ -4,6 +4,11 @@
 <head>
   <title>A JavaScript project</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -26,8 +31,22 @@
               <input class="input input-practice" placeholder="Practice / Institution*"></input>
               <input class="input input-email" placeholder="Email Address*"></input>
               <input class="input input-phone" placeholder="Phone Number*"></input>
-              <input class="input input-profession" placeholder="Medical Profession*"></input>
-              <input class="input input-type" placeholder="Type of Inquiry*"></input>
+              <select class="input input-medical" name="medical-profession" id="medical-select">
+                <option value="0">Medical Profession*</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+              </select>
+              <select class="input input-type" name="type" id="type-select">
+                <option value="0">Type of Inquiry*</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+              </select>
               <textarea class="input input-message" placeholder="Enter Message*"></textarea>
             </div>
             <button class="form__button button">Send Message</button>

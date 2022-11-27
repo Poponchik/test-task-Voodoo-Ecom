@@ -1,7 +1,3 @@
-/* Opinionated CSS defaults based on:
-  ! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css 
-*/
-
 html {
   line-height: 1.2;
   -webkit-text-size-adjust: 100%;
@@ -9,7 +5,7 @@ html {
 
 html,
 * {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -20,127 +16,6 @@ p {
   margin: 0;
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
-legend {
-  padding: 0;
-}
-
-progress {
-  vertical-align: baseline;
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-
-[hidden] {
-  display: none;
-}
-
 .container {
   background: #FFFFFE;
   height: 100vh;
@@ -149,6 +24,7 @@ progress {
 .container__body {
   max-width: 1140px;
   margin: 0 auto;
+
 }
 
 .container__grid {
@@ -156,12 +32,8 @@ progress {
   grid-template-columns: 630px 470px;
   gap: 40px;
   margin-top: 60px;
-
+  padding-bottom: 130px;
 }
-
-.form {}
-
-.form__header {}
 
 .form__title {
   margin-bottom: 12px;
@@ -218,7 +90,7 @@ progress {
 }
 
 .form__button {
-  margin: 50px 0 130px 0;
+  margin-top: 50px;
 }
 
 .gm-style-iw-d {
@@ -230,7 +102,7 @@ progress {
 
 .gm-style-iw,
 .gm-style-iw-c {
-  top: 10px!important;
+  top: 10px !important;
   box-shadow: 0px 15px 30px rgba(220, 221, 243, 0.25) !important;
   width: 244px !important;
   padding: 0px !important;
@@ -283,4 +155,47 @@ progress {
 .info-window__phone img,
 .info-window__email img {
   width: 13px;
+}
+
+@media screen and (max-width: 400px) {
+  .container__body {
+    width: 350px;
+    padding-bottom: 130px;
+
+  }
+
+  .container__grid {
+    display: inline;
+  }
+
+  .form__inputs {
+    display: inline;
+    width: 350px;
+
+  }
+
+  .input:first-child{
+    margin-top: 0px;
+  }
+
+  .input{
+    box-sizing:border-box;
+    width: 100%;
+    margin-top: 36px;
+  }
+
+  .button{
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .form__text{
+    line-height: 175%;
+  }
+
+
+  #map{
+    max-height: 600px;
+  }
+
 }
