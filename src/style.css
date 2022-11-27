@@ -16,6 +16,10 @@ body {
   margin: 0;
 }
 
+p {
+  margin: 0;
+}
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -211,11 +215,72 @@ progress {
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
-
 }
 
 .form__button {
   margin: 50px 0 130px 0;
 }
 
+.gm-style-iw-d {
+  box-shadow: none;
+  padding: 0px !important;
+  margin: 0px !important;
+  overflow: hidden !important;
+}
 
+.gm-style-iw,
+.gm-style-iw-c {
+  top: 10px!important;
+  box-shadow: 0px 15px 30px rgba(220, 221, 243, 0.25) !important;
+  width: 244px !important;
+  padding: 0px !important;
+}
+
+.gm-ui-hover-effect {
+  display: none !important;
+}
+
+.gm-style-iw-tc {
+  display: none !important;
+}
+
+.marker-label {
+  background-color: #fff;
+  width: 187px;
+}
+
+.info-window {
+  padding: 20px;
+  margin: 0;
+  max-width: 187px;
+}
+
+.info-window__title {
+  padding: 0px;
+  margin: 0px;
+}
+
+.info-window__address {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 12px;
+}
+
+.info-window__phone,
+.info-window__email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #858585;
+  margin-top: 12px;
+}
+
+.info-window__phone p,
+.info-window__email p {
+  margin: 0;
+}
+
+.info-window__phone img,
+.info-window__email img {
+  width: 13px;
+}
