@@ -1,0 +1,28 @@
+.custom-select{
+    padding: 18px;
+    color: #414042;
+    border: none;
+    box-shadow: 0px 16px 32px rgba(202, 203, 210, 0.25);
+    border-radius: 8px;
+    position: relative;
+  }
+
+.option-div {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+
+.option {
+    width: 100%;
+}
+.hide-select {
+    display: none;
+}

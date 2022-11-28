@@ -68,6 +68,17 @@ p {
 }
 
 
+
+/* .custom-select option{
+  color: #414042;
+  border: none;
+  margin-top: 100px!important;
+} */
+
+
+
+
+
 .input-message,
 .input-type {
   grid-column-start: 1;
