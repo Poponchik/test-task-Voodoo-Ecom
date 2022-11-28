@@ -1,11 +1,18 @@
-.custom-select{
+.wrapper{
+    display: flex;
+    font-family: 'Inter', 'sans-serif';
     padding: 18px;
     color: #414042;
+    font-size: 16px;
     border: none;
     box-shadow: 0px 16px 32px rgba(202, 203, 210, 0.25);
     border-radius: 8px;
     position: relative;
-  }
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+
+}
 
 .option-div {
     position: absolute;
@@ -17,12 +24,32 @@
     display: flex;
     flex-direction: column;
     row-gap: 12px;
+    z-index: 10000;
+    box-shadow: 0px 26px 32px rgba(202, 203, 210, 0.25);
+
 }
 
 
 .option {
     width: 100%;
+    line-height: 28px;
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
+
+.option:hover{
+    background-color: #F2F2F2;
+    padding-left: 12px;
+    transition: all 0.5s ease;
+}
+
+
 .hide-select {
     display: none;
+}
+
+@media screen and (max-width: 400px) {
+    .wrapper{
+        margin-top: 36px;
+    }
 }

@@ -1,38 +1,40 @@
-window.onclick = function (event) {
-    const customSelects = [...document.querySelectorAll('custom-select')] || []
-    console.log({customSelects})
-    const optionDiv = document.querySelector('.option-div')
-    if (customSelects.include(event.target)) return
-    return optionDiv.remove()
-}
-
 window.onload = function () {
-    const list = [...document.querySelectorAll("select")];
+    const selectList = [...document.querySelectorAll("select")];
 
-    const customSelects = list.map(select => {
+    const customSelects = selectList.map(select => {
         select.classList.add('hide-select')
         const options = select.childNodes
-        const newSelect = document.createElement('div')
 
-        // const img = document.createElement('img')
-        // img.setAttribute('src', '/public/images/mail.png')
-        // newSelect.appendChild(img)
-        
+        const wrapper = document.createElement('div')
+        wrapper.classList.add('wrapper')
+        wrapper.tabIndex = "0"
+        wrapper.onblur = () => {
+            const optionDiv = document.querySelector('.option-div')
+            optionDiv.remove()
+        }
+        const newSelect = document.createElement('div')
+        const img = document.createElement('img')
+        img.setAttribute('src', '/public/images/arrow.svg')
+        newSelect.appendChild(img)
+
+        wrapper.appendChild(newSelect)
+        wrapper.appendChild(img)
+
         newSelect.classList.add('custom-select')
 
         newSelect.textContent = select.childNodes[1].textContent
 
-        newSelect.onclick = () => {
-            const exists = document.querySelector('.option-div')
-            if (exists) {
-                return exists.remove()
+        wrapper.onclick = () => {
+            const existedOptionDiv = document.querySelector('.option-div')
+            if (existedOptionDiv) {
+                return existedOptionDiv.remove()
             }
             const optionDiv = document.createElement('div')
             optionDiv.classList.add('option-div')
             newSelect.appendChild(optionDiv)
 
             options.forEach((option, index) => {
-                if (index < 2) return
+                if (index < 2) return  //remove first default option from list
 
                 const optionElement = document.createElement('div')
                 optionElement.classList.add('option')
@@ -45,23 +47,18 @@ window.onload = function () {
             })
         }
 
-
-        function onSelect(opt, element) {
+        function onSelect(optionDiv, element) {
             newSelect.setAttribute("selected", element.value)
             newSelect.textContent = element.text
-            console.log({ opt })
-            return opt.remove()
+            return optionDiv.remove()
         }
-
-        return newSelect
+        return wrapper
+        
     })
 
     const [select1, select2] = customSelects
-    console.log({ select1, select2 })
     const selectDivs = [...document.querySelectorAll('.select-div')]
     selectDivs[0].appendChild(select1)
     selectDivs[1].appendChild(select2)
-
-
 
 }
