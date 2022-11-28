@@ -14,7 +14,7 @@ window.onload = function () {
         }
         const newSelect = document.createElement('div')
         const img = document.createElement('img')
-        img.setAttribute('src', '/public/images/arrow.svg')
+        img.setAttribute('src', '../public/images/arrow.svg')
         newSelect.appendChild(img)
 
         wrapper.appendChild(newSelect)

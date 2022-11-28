@@ -54,15 +54,15 @@ const marker = new google.maps.Marker({
   map,
   title: "Uluru (Ayers Rock)",
   icon: {
-    url: "/public/images/352521_location_on_icon.svg",
+    url: "../public/images/352521_location_on_icon.svg",
   },
 });
 
 
 let popupString = '<div class="info-window"><h3 class="info-window__title">Voodoo</h3>' +
   '<p class="info-window__address">137 Glasgow St., Unit 115 Kitchener, ON N2G 4X8 Ukraine</p>' +
-  '<div class="info-window__phone"><img src="/public/images/phone.png"/><p>1-800-480-9597</p></div>' +
-  '<div class="info-window__email"><img src="/public/images/mail.png"/><p>info@voodoo.com</p></div>' +
+  '<div class="info-window__phone"><img src="../public/images/phone.png"/><p>1-800-480-9597</p></div>' +
+  '<div class="info-window__email"><img src="../public/images/mail.png"/><p>info@voodoo.com</p></div>' +
   '</div>';
 
 const infowindow = new google.maps.InfoWindow({
